@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="categoria.js">
+    <title>Desafio</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <h1> Suite Store</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+        <div class="consulta">
+            <form id="form-cat">
+                <input class="Input-category" name="name" type="text" id="categoria-name" placeholder="Category name"><br>
+                <input class="Input-Tax-category" name="tax" type="number" onkeypress="return event.charCode >= 48" min="1" id="tax-name" placeholder="Tax $"><br>
+                <button onclick="postCategoria()" type="submit" class="botao" id="btn" >Add Category</button>
+            </form>
+        </div>
+        <div>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th class="tbl-mr">Code</th>
+                    <th class="tbl-mn">Category</th>
+                    <th class="tbl-mn">Tax</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-categoria">
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </main>
+</body>
+</html>
+<script src="categoria.js"></script>

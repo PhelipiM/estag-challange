@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <h1> Suite Store</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="consulta">
+                <form id="form-index">
+                <div class="compra">
+                    <select  onchange="changeFormValues(event)" class="select" name="Products" id="Products">
+                        <option selected disabled value="">Product</option>
+                    </select>
+                </div>
+                <div class="Inputs">
+                    <input class="Input-Amount" id="amount-home" name="amount" type="number" onkeypress="return event.charCode >= 48" placeholder="Amount">
+                    <input class="Input-Amount" id="tax-home" type="number" placeholder="Tax" disabled>
+                    <input class="Input-Amount" id="price-home" type="number" placeholder="Price" disabled>
+                    <button class="botao" id="btn-home">Add Carrinho</button>
+                </div>
+                
+                </form>
+            </div>
+            <div>
+                <table  class="tabela">
+                    <thead>
+                        <tr>
+                            <th class="tbl-mr">Product</th>
+                            <th class="tbl-mn">Unit price</th>
+                            <th class="tbl-mn">Amount</th>
+                            <th class="tbl-mn">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-home">
+                    </tbody>
+                </table>
+                <div class="total">
+                    <form id="form-carrinho" onsubmit="createHistory(event)">
+                    <label class="tax-t" for="Tax" >Tax:</label>
+                    <Input class="Input-t" type="text" id="index-tax" name="tax" disabled><br>
+                    <label class="total-t" for="Total">Total:</label>
+                    <Input class="Input-t" type="text" id="index-total" name="total" disabled><br>
+                    <button class="btm1-t" onclick="cancelCart()" >Cancel</button>
+                    <input class="btm2-t" type="submit" id="finish" value="Finish"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+<script src="index.js"></script>

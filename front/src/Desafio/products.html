@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <h1> Suite Store</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="container">
+        <div class="consulta">
+            <form id="form-prod">
+                <div class="compra-produto" id="form">
+                    <select class="select" name="categoryCode" id="select-prod"></select>
+                </div>
+                <input name="name" class="Input-Amount" type="text" onkeypress="return event.charCode >= 48" min="1" id="inp-name" placeholder="Product name">
+                <input name="amount" class="Input-Amount" type="number" onkeypress="return event.charCode >= 48" min="1" id="inp-amount" placeholder="Amount">
+                <input name="price" class="Input-Amount" type="number" onkeypress="return event.charCode >= 48" min="1" id="inp-price" placeholder="$Price">
+                <button onclick="postProdutos()" type="submit" class="botao" id="btn" >Add Category</button>
+            </form>
+        </div>
+        <div >
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th class="tbl-mr">Code</th>
+                    <th class="tbl-mn">Product</th>
+                    <th class="tbl-mn">Amount</th>
+                    <th class="tbl-mn">Price</th>
+                    <th class="tbl-mn">Category</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-produto">
+            </tbody>
+        </table>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
+<script src="products.js"></script>
