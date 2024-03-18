@@ -12,9 +12,10 @@
                 echo getOrders();
                 break;
             case "POST":
+                $code = $_POST["code"];
                 $total = $_POST["total"];
                 $tax = $_POST["tax"];    
-                echo postOrders($total, $tax);
+                echo postOrders($code, $total, $tax);
                 break;
             case "DELETE":
                 $deleteOrd = $_GET["code"];    

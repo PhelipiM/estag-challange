@@ -10,9 +10,9 @@
         $dataOrd = $getOrders->fetchALL();
         return json_encode($dataOrd);
     };
-    function postOrders($total, $tax){
+    function postOrders($code, $total, $tax){
 
-        $postOrders = myPDO->prepare("INSERT INTO orders (TOTAL, TAX) VALUES ({$total},{$tax})");
+        $postOrders = myPDO->prepare("INSERT INTO orders (CODE, TOTAL, TAX) VALUES ('$code',$total,$tax)");
         $postOrders->execute();
         return "created";
     };
