@@ -1,43 +1,286 @@
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-  }
+* {
+  font-family: arial;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #dfdfdf;
+}
+
+.header {
+  background-color: #4741f8;
+  color: rgb(33, 0, 87);
+  padding-left: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 20px;
+}
+
+.consulta {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.compra {
+  margin-bottom: 10px;
+}
+
+.tabela {
+
+  width: 100%;
+  border: solid 1px rgba(0, 0, 0, 0.13);
+  border-radius: 30px;
+  background-color: #ffffffc9;
+  border-radius: 30px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+   
+}
+
+.select,
+.select-produto,
+.Input-Amount,
+.Input-Tax,
+.Input-price,
+.botao {
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  border: 1px solid rgb(197, 197, 197);
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+
+.Input-Amount {
+  padding-right: 215px;
+}
+
+.Input-Tax,
+.Input-price {
+  width: 25%;
+  margin-left: 7px;
+}
+
+.btn-t {
+  margin-left: 35%;
+  background-color: #4741f8;
+  border-radius: 5px;
+  width: 20%;
+  height: 30px;
+  margin-top: 10px;
+  border: 0px;
+  font-size: 15px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4741f8;
+  padding: 10px 20px;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 33px;
+  color: white;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 25px;
   
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
   
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+.td-cat{
+  font-size: 17px;
+  font-family: cursive;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+.total {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.tax-t {
+  font-size: 20px;
+}
+
+.total-t {
+  font-size: 20px;
+}
+
+.btm1-t,
+.btm2-t {
+  width: 45%;
+  padding: 10px;
+  font-size: 18px;
+  border: 0;
+}
+
+.btm2-t {
+  background-color: #4741f8;
+  color: white;
+}
+
+.Input-category,
+.Input-Tax-category {
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgb(197, 197, 197);
+  width: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.bto-h {
+  width: 20%;
+  margin-left: 3%;
+  background-color: #4741f8;
+  font-size: 25px;
+  margin-left: 40%;
+  border-radius: 5px;
+}
+.bto-ha{
+  text-decoration: none;
+  color: #ffffff;
+
+}
+
+
+.btn-delete{
+  margin-left: 5px;
+  margin-top: 15px;
+  background-color: rgb(247, 81, 81);
+  font-size: 16px;
+  border-radius: 10px;
+
+}
+.div-tabela{
+  border: solid 1px;
+  display: grid;
+  display: flex;
+  padding: 2%;
+}
+.div-tabela-menor{
+
+  padding-right: 20%;
+  font-size: 20px;
+}
+.button {
+  margin-top: 3%;
+  margin-left: 35%;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2369c4;
+  box-shadow: 0px 15px 20px rgba(46, 110, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button:active {
+  transform: translateY(-1px);
+}
+.input {
+  margin-top: 5%;
+  width: 90%;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 5px 5px 15px #bebebe,
+     -20px -20px 60px #ffffff;
+  transition: 0.3s;
+ }
+ 
+ .input:focus {
+  outline-color: #267dff;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #ffffff,
+     inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+ }
+.Input-t{
+  width: 80px;
+}
+.form-carrinho{
+  display: grid;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
   }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-      animation: logo-spin infinite 20s linear;
-    }
+
+  .header {
+      padding-left: 10px;
+      font-size: 18px;
   }
-  
-  .card {
-    padding: 2em;
+
+  nav h1 {
+      font-size: 25px;
   }
-  
-  .read-the-docs {
-    color: #888;
+
+  nav ul {
+      padding-top: 15px;
   }
-  
+
+  nav ul li {
+      padding-right: 15px;
+  }
+
+  .Input-Amount {
+      padding-right: 10px;
+  }
+}
