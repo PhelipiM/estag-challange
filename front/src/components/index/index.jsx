@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addProductToCart, removeProductToCart } from "../../redux/cart/actions";
 import rootReducer from "../../redux/root-reducer";
-
+import Carrinho from "./carrinho";
 
 function index() {
     const url = 'http://localhost/routes/products.php'
@@ -147,7 +147,6 @@ function index() {
                 <form id="form-index">
                     <div className="compra">
                         <select className="select" name="Products" id="Products" value={selectedProduct} onChange={(e) => setSelectProdut(e.target.value)}>
-
                             <option hidden>Products...</option>
                             {product.map((item) => (
                                 <option key={item.code} value={item.code}>{item.name}</option>
@@ -188,13 +187,7 @@ function index() {
                     </tbody>
                 </table>
                 <div className="total">
-                    <form id="form-carrinho" >
-                        <label className="tax-t" htmlFor="Tax" >Tax:</label>
-                        <input className="Input-t" type="text" value={taxCarrinho} id="index-tax" name="tax" disabled />
-                        <label className="total-t" htmlFor="Total">Total:</label>
-                        <input className="Input-t" type="text" value={totalCarrinho} id="index-total" name="total" disabled />
-                        <button className="btn-t" onClick={createHistory} type="submit" id="finish">finish</button>
-                    </form>
+                        <Carrinho taxCarrinho={taxCarrinho} totalCarrinho={totalCarrinho} createHistory={createHistory}/>
                 </div>
             </div>
         </div>
